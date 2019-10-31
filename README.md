@@ -1,5 +1,7 @@
 # TechTrekUI - Built for DBS TechTrek2020
 
+Built on Angular framework.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
 ## Setup local environment
