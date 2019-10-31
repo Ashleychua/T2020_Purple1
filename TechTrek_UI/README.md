@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Setup local environment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Please refer [HERE](https://angular.io/guide/setup-local) to setup Angular development environment
 
 ## Running the programme
 
