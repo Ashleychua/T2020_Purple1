@@ -1,3 +1,5 @@
+# This frontend was built for DBS TechTrek 2020
+
 # TechTrekUI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
