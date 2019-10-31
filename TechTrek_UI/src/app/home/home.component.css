@@ -1,0 +1,15 @@
+.my-home-container {
+  min-height: 100%;
+  margin-top: 2px;
+  background-color: white;
+  padding: 10px;
+}
+
+.my-profile {
+  height: 500px;
+}
+
+.home-toprow {
+  border: 1px solid silver;
+  border-radius: 20px;
+}

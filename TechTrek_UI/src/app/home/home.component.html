@@ -1,0 +1,43 @@
+<div class="my-home-container mat-elevation-z8">
+  <div style="padding: 10px">
+    <div class="container-fluid ">
+      <div class="row no-gutters">
+        <div
+          class="col-12 home-toprow"
+          style="text-align: center; padding: 10px;"
+        >
+          <h1>Hi {{ currentUser.username }}</h1>
+          <h2>Last Login:</h2>
+        </div>
+      </div>
+
+      <div class="row no-gutters" style="padding-top: 20px;">
+        <div class="col-4">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+          <img
+            style="width:65px; height:65px;"
+            src="../../assets/profile.svg"
+          />
+          <p>Username: {{ currentUser.username }}</p>
+          <p>Name: {{ currentUser.firstName }}</p>
+          <p>My ID: {{ currentUser.id }}</p>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+          <a [routerLink]="['./accounts']"
+            ><img
+              style="width:200px; height:200px;"
+              src="../../assets/account-balance.svg"
+          /></a>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+          <a [routerLink]="['./customer-messages']"
+            ><img style="width:200px; height:200px;" src="../../assets/mail.svg"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

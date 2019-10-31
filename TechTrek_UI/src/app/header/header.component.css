@@ -1,0 +1,68 @@
+.navbar-outer {
+  height: 67px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-inner {
+  height: 100%;
+  max-width: 1200px;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.dbs-logo {
+  padding: 19px 16px 16px 16px;
+  text-align: center;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.95) 3;
+}
+
+li {
+  float: left;
+  height: 100%;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 21px 16px 16px 16px;
+  height: 100%;
+  color: #2e2e2e;
+  font-weight: 500;
+}
+
+li a:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.logout {
+  float: right;
+  background-color: rgb(243, 36, 36);
+}
+
+.logout a {
+  color: white;
+}
+
+.logout a:hover {
+  background-color: rgb(214, 48, 48);
+}

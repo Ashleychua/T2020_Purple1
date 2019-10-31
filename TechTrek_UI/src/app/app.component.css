@@ -1,0 +1,23 @@
+.my-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  min-height: 100%;
+  position: relative;
+}
+
+.outer-content {
+  display: flex;
+  justify-content: center;
+}
+
+.inner-content {
+  width: 1150px;
+  max-width: 1150px;
+  padding-bottom: 45px;
+}
+
+.my-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

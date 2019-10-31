@@ -1,0 +1,36 @@
+<div class="navbar-outer">
+  <div class="container navbar-inner">
+    <ul>
+      <li>
+        <div class="dbs-logo">
+          <img
+            style="width:94px; height:32px;"
+            src="../../assets/dbs-logo.png"
+          />
+        </div>
+      </li>
+
+      <li *ngIf="currentUser">
+        <a [routerLink]="['./']">Home</a>
+      </li>
+
+      <li *ngIf="currentUser">
+        <a [routerLink]="['./accounts']">Deposit Accounts</a>
+      </li>
+
+      <li *ngIf="currentUser">
+        <a [routerLink]="['./credit-accounts']">Credit Accounts</a>
+      </li>
+
+      <li *ngIf="currentUser">
+        <a [routerLink]="['./customer-messages']">Messages</a>
+      </li>
+
+      <li *ngIf="currentUser" class="logout">
+        <a (click)="logout()">
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

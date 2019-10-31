@@ -1,0 +1,130 @@
+<div class="my-accounts-container" d-flex>
+  <app-alert></app-alert>
+
+  <mat-tab-group>
+    <div *ngFor="let creditAcct of creditAccounts">
+      <mat-tab label="{{ creditAcct.accountId }}">
+        <div style="padding-top: 10px;">
+          <h4>Account Details</h4>
+          <p>Account ID: {{ creditAcct.accountId }}</p>
+          <p>Account Name: {{ creditAcct.displayName }}</p>
+          <p>Account Type: {{ creditAcct.cardNumber }}</p>
+        </div>
+      </mat-tab>
+    </div>
+  </mat-tab-group>
+
+  <div>
+    <div style="padding: 10px">
+      <div class="mat-elevation-z8">
+        <mat-tab-group>
+          <mat-tab label="Account 1">
+            <table
+              mat-table
+              class="table-striped"
+              [dataSource]="dataSource"
+              matSort
+              style="width: 100%"
+            >
+              <!-- Payment Reference column -->
+              <ng-container matColumnDef="transactionId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Transaction ID
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.transactionId }}
+                </td>
+              </ng-container>
+
+              <!-- Buyer Code column -->
+              <ng-container matColumnDef="accountId">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Account ID
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.accountId }}
+                </td>
+              </ng-container>
+
+              <!-- Supplier Code column -->
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Type
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.type }}
+                </td>
+              </ng-container>
+
+              <!-- Payment Currency column -->
+              <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Amount
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.amount }}
+                </td>
+              </ng-container>
+
+              <!-- Payment Amount column -->
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Date
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.date }}
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="tag">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Tag
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.tag }}
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="referenceNumber">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                  Reference
+                </th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.referenceNumber }}
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+
+            <mat-card
+              *ngIf="isLoading"
+              style="display: flex; justify-content: center; align-items: center"
+            >
+              <mat-progress-spinner
+                diameter="40"
+                color="primary"
+                mode="indeterminate"
+              >
+              </mat-progress-spinner>
+            </mat-card>
+
+            <mat-paginator
+              [pageSizeOptions]="[5, 10, 20]"
+              showFirstLastButtons
+            ></mat-paginator>
+          </mat-tab>
+
+          <mat-tab label="Second">
+            Content 2
+          </mat-tab>
+
+          <mat-tab label="Third">
+            Content 3
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>
