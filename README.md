@@ -8,8 +8,12 @@ Please refer [HERE](https://angular.io/guide/setup-local) to setup Angular devel
 
 ## Running the programme
 
-Clone the repo ```git clone https://github.com/Ashleychua/T2020_Purple1.git```
+Clone the repo `git clone https://github.com/Ashleychua/T2020_Purple1.git`
 
-Do a ```npm install``` to install the required modules
+Do a `npm install` to install the required modules
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+# TechTrekBackend - Built for DBS TechTrek2020
+
+...

@@ -15,6 +15,9 @@ import { User, UserDetails } from '../_models';
 export class HomeComponent implements OnInit {
   currentUser: User;
   details: UserDetails;
+  lastLogin: string;
+  dateOfBirth: string;
+
   constructor(
     private authenticationService: AuthenticationService,
     private alertService: AlertService,
@@ -24,6 +27,7 @@ export class HomeComponent implements OnInit {
     this.authenticationService.currentUser.subscribe(
       x => (this.currentUser = x)
     );
+    this.getDetails(this.currentUser.id);
   }
 
   ngOnInit() {}
@@ -33,6 +37,8 @@ export class HomeComponent implements OnInit {
       (data: UserDetails) => {
         console.log(data);
         this.details = data;
+        this.lastLogin = this.details.lastLogIn.substring(0, 10);
+        this.dateOfBirth = this.details.dateOfBirth.substring(0, 10);
       },
       error => {
         this.alertService.error('Could not retrieve the data requested');
