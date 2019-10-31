@@ -1,0 +1,14 @@
+accDetails1 = requests.get(url + 'accounts/deposit/' + custId, headers={"identity": "Group25", "token":"97d94689-6bd9-4c8c-a18f-627037c9cf5b"})
+dict10 = json.loads(accDetails.text)
+accounts = dict10[0]
+accId = dict2[0].get('accountId')
+balDetails = requests.get(url + 'accounts/deposit/'+ str(accId)+'/balance?month=1&year=2018', headers={"identity": "Group25", "token":"97d94689-6bd9-4c8c-a18f-627037c9cf5b"})
+dict3 = json.loads(balDetails.text)
+accounts.update(dict3)
+transactionsDetails = requests.get(url + 'transactions/'+ str(accId)+'?from=01-01-2018&to=02-01-2019', headers={"identity": "Group25", "token":"97d94689-6bd9-4c8c-a18f-627037c9cf5b"})
+dict5 = json.loads(transactionsDetails.text)
+#print(dict5)
+transactions = {}
+transactions["transactions"] = dict5
+accounts.update(transactions)
+transactionDetailsWithBal = json.dumps(accounts) #json for 3,4,5
